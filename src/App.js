@@ -1,23 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import ComponenteComplexoUm from './components/ComponenteComplexoUm';
+import ComponenteComplexoDois from './components/ComponenteComplexoDois';
+import ComponenteUm from './components/ComponenteUm';
+import ComponenteDois from './components/ComponenteDois';
+import { ContextSimpleProvider } from './state/Exemplo1-ContextoSimples';
+import { ContextComplexProvider } from './state/Exemplo2-ContextoComplexo';
+
+import ComponenteReduxUm from './components/ComponenteReduxUm'
+import ComponenteReduxDois from './components/ComponenteReduxDois'
+
+import ComponentRxjsUm from './components/ComponenteUmRxjs'
+import ComponentRxjsDois from './components/ComponenteDoisRxjs'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ComponentRxjsUm />
+      <ComponentRxjsDois />
+      <ComponenteReduxUm />
+      <ComponenteReduxDois />
+      <ContextSimpleProvider>
+        <div style={{ width: '100%' }}>
+          <ComponenteUm />
+          <ComponenteDois />
+        </div>
+      </ContextSimpleProvider>
+      <br />
+      <ContextComplexProvider>
+        <div style={{ width: '100%' }}>
+          <ComponenteComplexoUm />
+          <ComponenteComplexoDois />
+        </div>
+      </ContextComplexProvider>
     </div>
   );
 }
