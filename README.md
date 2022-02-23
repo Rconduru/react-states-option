@@ -7,6 +7,21 @@ O objetivo é testar várias formas de guardar estado para aplicação.
 - Redux;
 - Mobx ou RxJS ????
 
+Estados:
+
+1. Estados de Contextos (Isso não é estado)
+   1.2 useContext
+   1.2 - useContext + useReducer
+   2 - Patterns de Flux (Isso sim é um estado, imutável, inclusive)
+   2.1 - Redux (tradicional ou com toolkit)
+   2.2 - Redux Saga (organizado mas engessado e lento)
+   2.3 - Redux Thunk (desuso)
+   3 - Pattern de Flux Reativo
+   3.1 - Redux Observer
+   4 - Arquiteturas Reativas (Streams de valores)
+   4.1 - MobX
+   4.2 - RxJs
+
 ### `yarn start`
 
 Runs the app in the development mode.\
